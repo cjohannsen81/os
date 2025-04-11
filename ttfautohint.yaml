@@ -41,7 +41,9 @@ pipeline:
       make DESTDIR="${{targets.destdir}}" install-strip
 
 update:
-  enabled: false # Unsure how to watch this one for new versions
+  enabled: true
+  release-monitor:
+    identifier: 5012
 
 test:
   pipeline:
