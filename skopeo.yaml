@@ -54,5 +54,5 @@ test:
     - name: Pull and save an image locally
       runs: |
         tmpdir=$(mktemp -d)
-        skopeo copy --insecure-policy docker://cgr.dev/chainguard/static:latest dir:$tmpdir || exit 1
+        skopeo copy docker://cgr.dev/chainguard/static:latest dir:$tmpdir || exit 1
         [ -f $tmpdir/manifest.json ] || exit 1
